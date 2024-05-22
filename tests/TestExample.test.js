@@ -15,44 +15,44 @@ const Data = require('../fixtures/TestData');
 // Do you want to work out holiday: for a full leave year
 // And entering number of days worked per week 
 // *********************************************************************************************************************
-test('Test001 - Calculate Holiday Entitlement for Full Year with follwing options:', ({ page }) => {
+test('Test001 - Calculate Holiday Entitlement for Full Year with follwing options:',async ({ page }) => {
     const landingPage = new LandingPage(page);
-    landingPage.navigateTo();
+    await landingPage.navigateTo();
     // Click the Start button on Landing page
-     landingPage.clickStartButton();
+    await landingPage.clickStartButton();
 
     const selectIrregularHoursPage = new SelectIrregularHoursPage(page);
-     selectIrregularHoursPage.assertSelectIrregularHoursPage();
+    await selectIrregularHoursPage.assertSelectIrregularHoursPage();
     
     // Select irregular hours as "No"
-     selectIrregularHoursPage.selectRegularHours();
-     selectIrregularHoursPage.submit();
+    await selectIrregularHoursPage.selectRegularHours();
+    await selectIrregularHoursPage.submit();
 
     const holidayEntitlementBasedOnPage = new HolidayEntitlementBasedOnPage(page);
-    holidayEntitlementBasedOnPage.assertHolidayEntitlementBasedOnPage();
+    await holidayEntitlementBasedOnPage.assertHolidayEntitlementBasedOnPage();
 
     // Select 'days work per week'
-     holidayEntitlementBasedOnPage.selectDaysWorkPerWeek();
-     holidayEntitlementBasedOnPage.submit();
+    await holidayEntitlementBasedOnPage.selectDaysWorkPerWeek();
+    await holidayEntitlementBasedOnPage.submit();
 
     const selectFullOrPartOfYearForCalculationPage = new SelectFullOrPartOfYearForCalculationPage(page);
-     selectFullOrPartOfYearForCalculationPage.assertSelectFullOrPartOfYearForCalculationPage();
+    await selectFullOrPartOfYearForCalculationPage.assertSelectFullOrPartOfYearForCalculationPage();
 
     // Select the option 'for a full leave year'
-     selectFullOrPartOfYearForCalculationPage.selectForAFullLeaveYear();
-     selectFullOrPartOfYearForCalculationPage.submit(); 
+    await selectFullOrPartOfYearForCalculationPage.selectForAFullLeaveYear();
+    await selectFullOrPartOfYearForCalculationPage.submit(); 
 
     const numberOfDaysWorkedPerWeekPage = new NumberOfDaysWorkedPerWeekPage(page);
-     numberOfDaysWorkedPerWeekPage.assertNumberOfDaysWorkedPerWeekPage();
+    await numberOfDaysWorkedPerWeekPage.assertNumberOfDaysWorkedPerWeekPage();
     
     // Enter number of days worked per week
-     numberOfDaysWorkedPerWeekPage.enterDaysWorkedPerWeek(Data.Test001NumberOfDaysWorkedPerWeek);
-    numberOfDaysWorkedPerWeekPage.submit();
+    await numberOfDaysWorkedPerWeekPage.enterDaysWorkedPerWeek(Data.Test001NumberOfDaysWorkedPerWeek);
+    await numberOfDaysWorkedPerWeekPage.submit();
 
     const holidayEntitlementResultsPage = new HolidayEntitlementResultsPage(page);
-     holidayEntitlementResultsPage.assertHolidayEntitlementResultsPage();
+    await holidayEntitlementResultsPage.assertHolidayEntitlementResultsPage();
 
     // Assertion: Check if the page shows the expected holiday entitlement after continuing
-     holidayEntitlementResultsPage.assertExpactedHolidayEntitlement(Data.Test001ExpactedHolidays);
+    await holidayEntitlementResultsPage.assertExpactedHolidayEntitlement(Data.Test001ExpactedHolidays);
 
 });
