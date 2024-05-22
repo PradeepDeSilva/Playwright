@@ -1,0 +1,44 @@
+
+{
+    "Test001NumberOfDaysWorkedPerWeek": "5",
+    "Test001ExpactedHolidays": "28 days",
+
+    "Test002LeaveYearStartDay": "01",
+    "Test002LeaveYearStartMonth": "01",
+    "Test002LeaveYearStartYear": "2010",
+    "Test002EymplomentYearStartDay": "01",
+    "Test002EmploymentYearStartMonth": "06",
+    "Test002EmploymentYearStartYear": "2009",
+    "Test002NumberOfDaysWorkedPerWeek": "5",
+    "Test002ExpactedHolidays": "16.5 days",
+
+    "Test003EymplomentEndDay": "01",
+    "Test003EmploymentEndMonth": "12",
+    "Test003EmploymentEndYear": "2010",
+    "Test003LeaveYearStartDay": "01",
+    "Test003LeaveYearStartMonth": "01",
+    "Test003LeaveYearStartYear": "2010",
+    "Test003NumberOfHoursWorkedPerWeek": "40",
+    "Test003NumberOfDaysWorkedPerWeek": "5",
+    "Test003ExpactedHolidays": "205.6 hours",
+
+    "Test004EymplomentYearStartDay": "01",
+    "Test004EmploymentYearStartMonth": "10",
+    "Test004EmploymentYearStartYear": "2009",
+    "Test004EymplomentEndDay": "01",
+    "Test004EmploymentEndMonth": "06",
+    "Test004EmploymentEndYear": "2010",
+    "Test004NumberOfDaysWorkedPerWeek": "5",   
+    "Test004ExpactedHolidays": "18.8 days",
+
+    "Test005EymplomentYearStartDay": "01",
+    "Test005EmploymentYearStartMonth": "10",
+    "Test005EmploymentYearStartYear": "2009",
+    "Test005LeaveYearStartDay": "01",
+    "Test005LeaveYearStartMonth": "06",
+    "Test005LeaveYearStartYear": "2010",
+    "Test005ErrorMessageValidation": "Your leave year start date must be earlier than your employment start date"
+
+    
+
+  }
